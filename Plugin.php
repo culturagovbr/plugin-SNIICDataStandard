@@ -106,8 +106,6 @@ class Plugin extends \MapasCulturais\Plugin
                         $delivery->revenueType                    = $d['revenueType'] ?? null;
                         $delivery->commercialUnits                = $d['commercialUnits'] ?? null;
                         $delivery->unitPrice                      = $d['unitPrice'] ?? null;
-                        $delivery->monthInitial                   = $d['monthInitial'] ?? null;
-                        $delivery->monthEnd                       = $d['monthEnd'] ?? null;
                         $delivery->hasCommunityCoauthors          = $d['hasCommunityCoauthors'] ?? null;
                         $delivery->communityCoauthorsDetail       = $d['communityCoauthorsDetail'] ?? null;
                         $delivery->hasTransInclusionStrategy      = $d['hasTransInclusionStrategy'] ?? null;
