@@ -19,7 +19,7 @@ class Plugin extends \MapasCulturais\Plugin
         });
 
         $app->hook('GET(<<*>>.<<*>>):before', function () use ($app) {
-            $app->view->enqueueScript('app', 'sniic-utils', 'js/sniic-utils.js');
+            $app->view->enqueueScript('components', 'sniic-utils', 'js/sniic-utils.js', ['components-utils']);
         });
 
         if (isset($app->modules['OpportunityWorkplan'])) {
