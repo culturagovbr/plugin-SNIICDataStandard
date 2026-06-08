@@ -2,7 +2,7 @@
 
 use MapasCulturais\i;
 
-$this->import('panel--entity-tabs panel--entity-card mc-icon create-space');
+$this->import('sniic-panel--entity-tabs panel--entity-card mc-icon create-space');
 ?>
 
 <div class="panel-page">
@@ -26,5 +26,5 @@ $this->import('panel--entity-tabs panel--entity-card mc-icon create-space');
         </div>
     </header>
 
-    <panel--entity-tabs type="space" select="id,status,name,type,createTimestamp,terms,files.avatar,currentUserPermissions,isModel,isModelPublic,owner,informarQualOutroTipoDeEspaco"></panel--entity-tabs>
+    <sniic-panel--entity-tabs type="space" select="id,status,name,type,createTimestamp,terms,files.avatar,currentUserPermissions,isModel,isModelPublic,owner,informarQualOutroTipoDeEspaco"></sniic-panel--entity-tabs>
 </div>
