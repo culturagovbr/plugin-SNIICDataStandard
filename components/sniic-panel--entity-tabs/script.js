@@ -1,5 +1,5 @@
-app.component('panel--entity-tabs', {
-    template: $TEMPLATES['panel--entity-tabs'],
+app.component('sniic-panel--entity-tabs', {
+    template: $TEMPLATES['sniic-panel--entity-tabs'],
     emits: [],
 
     setup(props, { slots }) {
@@ -43,6 +43,13 @@ app.component('panel--entity-tabs', {
             grantedQuery['@permissionsUser'] = this.user
         }
 
+        if (this.type == 'opportunity') {
+            const api = new API('opportunity');
+            api.GET('/opportunity/findOpportunitiesModels').then((r) => r.json().then((data) => {
+                this.opportunitiesModels = data;
+            }));
+        }
+
         return {
             description: $DESCRIPTIONS[this.type],
             queries: {
@@ -54,6 +61,7 @@ app.component('panel--entity-tabs', {
                 archived: { status: 'EQ(-2)', ...query },
             },
             showPrivateKey: false,
+            opportunitiesModels: [],
         }
     },
     props: {
